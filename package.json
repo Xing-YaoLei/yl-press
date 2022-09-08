@@ -1,0 +1,22 @@
+{
+  "name": "ylpress",
+  "version": "1.0.0",
+  "description": "一些个人的文档或者备忘面试题等等",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV='/' vuepress dev docs",
+    "build": "cross-env NODE_ENV='/yl-press/' vuepress build docs"
+  },
+  "author": "烟雨任平生",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-prismjs": "^2.0.0-beta.49",
+    "@vuepress/plugin-search": "^2.0.0-beta.49",
+    "@vuepress/plugin-shiki": "^2.0.0-beta.49",
+    "vuepress": "^2.0.0-beta.49"
+  },
+  "dependencies": {
+    "@vuepress/theme-default": "^2.0.0-beta.49",
+    "cross-env": "^7.0.3"
+  }
+}
