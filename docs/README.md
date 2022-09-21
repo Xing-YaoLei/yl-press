@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/xianluo.png
+heroImage: http://oss.oh-undefined.com/xianluo.png
 heroText: 烟雨
 tagline: 点滴都是进步
 actionText: 马上进入 →

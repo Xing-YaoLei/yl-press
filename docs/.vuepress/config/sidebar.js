@@ -1,21 +1,19 @@
 module.exports = {
-  "/components": [
+  "/notes": [
     {
-      text: "VuePress",
-      link: "/components/pages/VuePress",
+      text: "网站建设",
+      collapsible: true,
+      children: ["/notes/pages/VuePress", "/notes/pages/Koa"],
     },
     {
       text: "学习提升",
       collapsible: true,
-      sidebarDepth: 2,
-      children: [
-        "/components/pages/leetcode",
-        "/components/pages/ES6",
-        // {
-        //   text: "整数反转",
-        //   link: "/components/pages/7-reverse.md",
-        // },
-      ],
+      children: ["/notes/pages/ES6"],
+    },
+    {
+      text: "力扣",
+      collapsible: true,
+      children: ["/notes/leetcode/1-两数之和", "/notes/leetcode/2-整数反转"],
     },
     {
       text: "面试题",
@@ -23,11 +21,11 @@ module.exports = {
       children: [
         {
           text: "InputNumber 数字输入框",
-          link: "/components/pages/InputNumber",
+          link: "/notes/pages/InputNumber",
         },
         {
           text: "InputNumber 数字输入框",
-          link: "/components/pages/InputNumber",
+          link: "/notes/pages/InputNumber",
         },
       ],
     },

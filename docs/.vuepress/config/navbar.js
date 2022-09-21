@@ -1,5 +1,5 @@
 module.exports = [
-  { text: "学习", link: "/components/pages/VuePress.md" },
+  { text: "学习", link: "/notes/pages/VuePress.md" },
   {
     text: "文档",
     children: [
