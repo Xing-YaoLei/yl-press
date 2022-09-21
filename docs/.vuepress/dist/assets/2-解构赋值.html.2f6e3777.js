@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-d296d6b8","path":"/notes/pages/ES6/2-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC.html","title":"\u89E3\u6784\u8D4B\u503C","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"notes/pages/ES6/2-\u89E3\u6784\u8D4B\u503C.md"}');export{t as data};
