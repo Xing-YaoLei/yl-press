@@ -13,7 +13,7 @@ module.exports = {
     {
       text: "力扣",
       collapsible: true,
-      children: ["/notes/leetcode/1-两数之和", "/notes/leetcode/2-整数反转"],
+      children: ["/notes/Leetcode/1-两数之和", "/notes/Leetcode/2-整数反转"],
     },
     {
       text: "面试题",

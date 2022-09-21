@@ -21,7 +21,7 @@ module.exports = {
   // 顶部添加logo 会默认编译到网站的head区域
   theme: theme({
     // 具体主题配置项 旧版本存在配置放在themeConfig的现象
-    logo: "/img/xianluo.png",
+    logo: "http://oss.oh-undefined.com/xianluo.png",
     navbar,
     sidebar,
     lastUpdatedText: "最后更新",
