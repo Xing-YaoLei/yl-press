@@ -6,9 +6,9 @@ module.exports = {
       children: ["/notes/pages/VuePress", "/notes/pages/Koa"],
     },
     {
-      text: "学习提升",
+      text: "Js程序",
       collapsible: true,
-      children: ["/notes/pages/ES6"],
+      children: ["/notes/pages/ES6/1-表达声明", "/notes/pages/ES6/2-解构赋值"],
     },
     {
       text: "力扣",
