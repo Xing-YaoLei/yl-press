@@ -80,6 +80,10 @@
 
   ```sh
   sh ./deploy.sh
+  
+  # or
+  
+  ./deploy.sh
   ```
 
   :::
