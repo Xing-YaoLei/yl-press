@@ -3,10 +3,10 @@ module.exports = {
     {
       text: "网站建设",
       collapsible: true,
-      children: ["/notes/pages/VuePress", "/notes/pages/Koa"],
+      children: ["/notes/pages/GiteePage","/notes/pages/VuePress", "/notes/pages/Koa"],
     },
     {
-      text: "Js程序",
+      text: "Js & ES6",
       collapsible: true,
       children: ["/notes/pages/ES6/1-表达声明", "/notes/pages/ES6/2-解构赋值"],
     },
