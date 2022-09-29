@@ -3,12 +3,23 @@ module.exports = {
     {
       text: "网站建设",
       collapsible: true,
-      children: ["/notes/pages/GiteePage","/notes/pages/VuePress", "/notes/pages/Koa"],
+      children: [
+        "/notes/pages/GiteePage",
+        "/notes/pages/VuePress",
+        "/notes/pages/Koa",
+      ],
     },
     {
-      text: "Js & ES6",
+      text: "Javascript",
       collapsible: true,
       children: ["/notes/pages/ES6/1-表达声明", "/notes/pages/ES6/2-解构赋值"],
+    },
+    {
+      text: 'Vue.js',
+      collapsible: true,
+      children:[
+        "/notes/pages/Vue/pinia"
+      ]
     },
     {
       text: "力扣",

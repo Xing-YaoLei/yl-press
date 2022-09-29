@@ -1,1 +1,0 @@
-import { defineClientConfig } from '@vuepress/client'
