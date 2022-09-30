@@ -18,7 +18,8 @@ module.exports = {
       text: 'Vue.js',
       collapsible: true,
       children:[
-        "/notes/pages/Vue/pinia"
+        "/notes/pages/Vue/pinia",
+        "/notes/pages/Vue/VueRouter"
       ]
     },
     {
