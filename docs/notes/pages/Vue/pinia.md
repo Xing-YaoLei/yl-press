@@ -230,9 +230,49 @@ store.$patch({
 ```js
 store.$patch((state) => {
   state.items.push({ name: 'iPhone14 Pro', price: 8899 })
-  state.isLoading = true
+  state.isLoading:true
 })
-// 该代码本人暂未在项目中尝试，暂时结合官方文档进行书写，尝试后，会对该注释进行修改以及调整。
 ```
 
-## 未完待续。。。
+::: warning 提示
+
+在Setup外使用useStore的时候，可能会报`getActivePinia was called with no active Pinia. Did you forget to install`的错误，具体如下所示。
+
+:::
+
+```js
+// src -> router -> index.js
+import { createRouter, createWebHashHistory } from "vue-router";
+// 引入Pinia的Base存储空间
+import useBaseStore from "@/stores/base";
+const store = useBaseStore(); // 本条代码报错
+// 引入原因：避免重复的定义存储空间 代码的简洁以及复用
+// 出现问题：报错，错误提示是在使用useStore的时候，Pinia还未创建 所以只能引入在内部
+```
+
+所以便将所以将`const store = useBaseStore()`本条代码放入了路由拦截的内部。
+
+```js
+router.beforeEach((to, from) => {
+  const store = useBaseStore();
+  store.$patch({
+    isLoading: true,
+  });
+});
+// 这样则可以避免在使用Store的时候Store还未创建完毕的错误。
+router.afterEach((to, from) => {
+  const store = useBaseStore();
+  store.$patch({
+    isLoading: false,
+  });
+});
+```
+
+## 未完待续
+
+---
+
+
+
+
+
