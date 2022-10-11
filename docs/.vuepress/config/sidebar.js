@@ -15,12 +15,9 @@ module.exports = {
       children: ["/notes/pages/ES6/1-表达声明", "/notes/pages/ES6/2-解构赋值"],
     },
     {
-      text: 'Vue.js',
+      text: "Vue.js",
       collapsible: true,
-      children:[
-        "/notes/pages/Vue/pinia",
-        "/notes/pages/Vue/VueRouter"
-      ]
+      children: ["/notes/pages/Vue/pinia", "/notes/pages/Vue/VueRouter"],
     },
     {
       text: "力扣",
@@ -31,14 +28,10 @@ module.exports = {
       text: "面试题",
       collapsible: true,
       children: [
-        {
-          text: "InputNumber 数字输入框",
-          link: "/notes/pages/InputNumber",
-        },
-        {
-          text: "InputNumber 数字输入框",
-          link: "/notes/pages/InputNumber",
-        },
+        "/notes/interview/HTML",
+        "/notes/interview/Js",
+        "/notes/interview/Vue",
+        "/notes/interview/React",
       ],
     },
   ],
