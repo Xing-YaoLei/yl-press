@@ -6,12 +6,12 @@
 let obj = {
   name: "敖兴",
   age: "?",
-  skill: "尿尿龙",
+  skill: "风暴龙",
   say: function () {
     console.log(`姓名${this.name},年龄:${this.age},技能:${this.skill},金额:${this.price}`);
   },
 };
-obj.say() // 姓名敖兴,年龄:?,技能:尿尿龙,金额:undefined
+obj.say() // 姓名敖兴,年龄:?,技能:风暴龙,金额:undefined
 ```
 
 默认情况下对象中使用this指向为对象中的属性，当对象中若不存在该属性则为undefined
@@ -34,7 +34,7 @@ let money = {
   skill: "大鹏展翅",
   price: 7,
 };
-obj.say(); // 姓名敖兴,年龄:?,技能:尿尿龙,金额:undefined
+obj.say(); // 姓名敖兴,年龄:?,技能:风暴龙,金额:undefined
 // bind 相较于call与apply的使用，多出来了一个括号运行
 obj.say.bind(anger)(); // 姓名希瓦娜,年龄:18,技能:喷火龙,金额:8
 obj.say.call(anger); // 姓名希瓦娜,年龄:18,技能:喷火龙,金额:8
@@ -65,7 +65,7 @@ obj.say.apply(money); // 姓名艾达斯,年龄:?,技能:大鹏展翅,金额:7
 - bind则与call的参数传递方式相同。如下所示：
 
   ```js
-  obj.say.bind(obj,'法师')(); // 姓名敖兴,年龄:?,技能:尿尿龙,金额:undefined,定位:法师
+  obj.say.bind(obj,'法师')(); // 姓名敖兴,年龄:?,技能:风暴龙,金额:undefined,定位:法师
   ```
 
   
