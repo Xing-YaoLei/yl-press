@@ -12,7 +12,10 @@ module.exports = {
     {
       text: "Javascript",
       collapsible: true,
-      children: ["/notes/pages/ES6/1-表达声明", "/notes/pages/ES6/2-解构赋值"],
+      children: [
+        "/notes/pages/Javascript/ES6.md",
+        "/notes/pages/Javascript/Js基础.md"
+      ],
     },
     {
       text: "Vue.js",
