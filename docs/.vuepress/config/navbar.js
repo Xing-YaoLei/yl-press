@@ -1,12 +1,12 @@
 module.exports = [
   { text: "学习", link: "/notes/pages/VuePress.md" },
-  {
-    text: "文档",
-    children: [
-      { text: "介绍", link: "/document/introduction/" },
-      { text: "注意事项", link: "/document/tips/" },
-    ],
-  },
+  // {
+  //   text: "文档",
+  //   children: [
+  //     { text: "介绍", link: "/document/introduction/" },
+  //     { text: "注意事项", link: "/document/tips/" },
+  //   ],
+  // },
   {
     text: "工具箱",
     children: [
