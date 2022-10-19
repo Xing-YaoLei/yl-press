@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-yarn run build
+yarn run gitee
 
 # 将网站提交Gitee
 git init
