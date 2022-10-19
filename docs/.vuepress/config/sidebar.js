@@ -35,6 +35,8 @@ module.exports = {
         "/notes/interview/Js",
         "/notes/interview/Vue",
         "/notes/interview/React",
+        "/notes/interview/计算机网络.md",
+        "/notes/interview/浏览器.md"
       ],
     },
   ],

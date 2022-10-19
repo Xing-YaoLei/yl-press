@@ -130,3 +130,79 @@ console.log('----End----')
 | Apply | `obj.fn.apply(obj,['参数1','参数2'])` | 第二个参数需要使用数组的方式进行参数传递 |
 
 前往查看具体的[案例展示](../pages/Javascript/Js基础.md#绑定this指向)
+
+### ES6新增
+
+- 声明：`let`、`const`
+- 解构赋值
+- 字符串
+  - 模版字符串
+  - 字符串遍历`for-of`
+  - `includes()`是否存在字符串
+  - `matchAll()`返回正则表达式
+  - `repeat()`重复字符串
+  - `startsWith()` 匹配字符串头部指定字符串
+  - `endsWith()`匹配字符串尾部字符串
+  - ...
+- 对象
+  - `Object.is()` 对比两个值是否相等
+  - `Object.assign()` 合并对象、浅拷贝
+  - `Object.getPrototypeOf()` 获取对象的原型对象
+  - `Object.setPrototypeOf() `设置对象的原型对象
+  - 对象属性的遍历
+    - `for in`遍历对象中可继承可枚举的属性
+    - `Object.keys` & `Object.values`  keys返回的对象所有键，values返回所有的值
+    - `Object.getOwnPropertyNames()`返回对象非Symbol属性键组成的数组
+    - ...
+- 数组
+  - 扩展运算符(...)，可以用于转换数组，也可以用于数组的合并等
+  - `Array.from()` 类数组转换为数组
+  - `Array.of()`将一组值转换为数组
+  - `find()`返回第一个符合条件的项目
+  - `findIndex()`返回第一个符合条件的项目的下标
+  - `fill()`填充数组，返回原数组
+  - `entries()`返回索引值和属性值为遍历器的对象
+  - `includes()` ES2016新增，是否存在指定内容
+  - `flat()`扁平化数组，俗称数组降维
+- 函数
+  - 参数默认值
+  - rest参数，可以用于接收函数多余的参数
+    - 例如 `function fn(a,b,c,...rest){} fn(1,2,3,4,5,6,7,8)`其中输出`rest`为`[4,5,6,7,8]`
+  - 箭头函数
+    - 箭头函数不能作为构造函数使用（箭头函数没有prototype所以不能使用，也无法使用new操作符调用箭头函数）
+- Symbol
+- Set
+- Map
+- Proxy
+  - `get()`
+  - `set()`
+  - `has()`
+  - ...
+- Class 理论上为构造函数语法糖
+  - constructor
+  - extends
+  - super
+  - static
+  - ...
+- Promise
+  - 状态
+    - `pending` - 进行中
+    - `resolved` - 成功
+    - `rejected `- 数百
+  - 方法
+    - `then()`接收成功`(resolved)`回调
+    - `catch()`接收失败`(rejected)`回调
+    - `Promise.all()`同时执行多个Promise然后以数组的形式返回（其中一个失败则整体状态为失败）
+    - `Promise.race()`俗称"跑得快",接收多个Promise，返回最先返回结果的Promise
+    - `Promise.resolve()`转换对象为Promise对象
+    - `Promise.reject()`对象状态为失败状态
+    - `Promise.finally()`无论成功失败都会执行`finally`的方法
+    - ...
+- async/await
+  - 异步解决方案之一
+
+### devDependencies和dependencies的区别？
+
+dev可以理解为development**开发**的缩写，故devDependencies为开发依赖，开发依赖多为各类预处理器、代码检查
+
+dependencies为项目依赖，项目依赖即便是项目上线依旧需要依靠其运行的依赖，例如框架主体、路由等内容
