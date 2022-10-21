@@ -1,5 +1,55 @@
 # Vue.js面试题
 
+### Vue数据双向绑定原理 & Vue2.x以及3.x绑定的区别？
+
+Vue2.x是借助`Object.defineProperty()`来进行实现，我们可以通过使用该API来为对象添加属性，并且设置getter以及setter方法，当我们在设置完成后，每当使用该属性的时候，都会调用getter方法，每次设置值的时候都会调用setter方法。
+
+```js
+let obj = {};
+let age;
+Object.defineProperty(obj, 'age', {
+  get: function getter() {
+    console.log("getter");
+    return age;
+  },
+  set: function setter(newVal) {
+    console.log("setter");
+    age = newVal;
+  },
+});
+obj.age= 10   // setter
+console.log(obj.age) // getter  // 10
+console.log('--------------------------------------------------------')
+console.log(obj.age) // getter  // 10
+```
+
+Vue3.x是借助Proxy实现
+
+```js
+let obj = {
+  age:10,
+  name:'敖兴'
+};
+let bindObj = new Proxy(obj /* 此处obj可以预设也可以设置为{}空对象*/, {
+  get: function (target, propKey, receiver) {
+    console.log(`getting:${propKey}`);
+    return Reflect.get(target, propKey, receiver);
+  },
+  set: function (target, propKey, value, receiver) {
+    console.log(`setting:${propKey}为${value}`);
+    return Reflect.set(target, propKey, value, receiver);
+  },
+});
+bindObj.age = 9999 // setting:age为10
+console.log(bindObj.name) // getting:name // 敖兴
+```
+
+::: tip Reflect
+
+Reflect对象与Proxy对象一样也是ES6为了操作对象而提供的新的API，在使用Object对象的时候，无法定义某些属性的时候会抛出错误，而Reflect则会返回false，简单来说，就是通过使用Reflect来代替Object的使用。详情可以查看[Reflect](https://es6.ruanyifeng.com/#docs/reflect)的相关用法
+
+:::
+
 ### Vue的生命周期都有哪些？
 
 | 生命周期 | Vue2.x        | Vue3.x          |
@@ -113,3 +163,9 @@ Vuex中核心属性为State、Getter、Mutation、Action、Module
 `Modules`用于Vuex中的模块化存储，针对大型项目，进行数据状态的分别存放。
 
 Vuex的使用相对较为复杂，在Vue3.x版本中，Vue官方推荐使用大菠萝（Pinia）来进行状态管理，其状态管理器进行了一定程度的优化，Vuex中的Mutations与Action被集成在了一个地方。具体查看[Pinia篇](../pages/Vue/pinia)
+
+### nextTick是干嘛用的？
+
+在下次DOM更新循环结束之后执行的延迟回调。在修改数据之后立刻使用这个方法获取更新后的DOM。
+
+简单点来说就是在Vue中，在某些情况下，数据发生变化了，但是DOM上面却并没有进行对应的更新渲染，我们可以通过该API手动进行页面中视图数据的更新。
