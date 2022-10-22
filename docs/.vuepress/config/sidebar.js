@@ -7,6 +7,7 @@ module.exports = {
         "/notes/pages/GiteePage",
         "/notes/pages/VuePress",
         "/notes/pages/Koa",
+        "/notes/pages/Jenkins"
       ],
     },
     {
