@@ -116,16 +116,27 @@ npm -v
 
 npm install
 # 安装项目依赖
-
 pwd
-
 echo '构建完成'
-pm2 restart all
 # 重启pm2
 echo '重启完成'
 ```
 
+::: danger 警告
+
+目前我在使用的是pm2进行项目的自动更新，当代码拉取下来之后pm2会自动运行更新程序，所以在这里本人只是进行了前端项目依赖的安装并没有进行其他操作。
+
+理论上这里本来是想要跑pm2 restart all 来重启程序的，但是Jenkins会自动给杀除衍生程序，问了问Java的朋友没用过Jenkins，问了问运维的朋友没了解过这个。
+
+当然首先是百度的，目前百度提供了两种方法。第一种则是配置**BUILD_ID**，第二种方法则是全局配置。两种方法都有尝试过，在shell中运行pm2依旧是没有显示任何的程序运行。所以此处是不完善的，后续完善了会进行更新。
+
+有懂的大佬也烦请能帮忙解决一下。542528512@qq.com不胜感激。
+
+:::
+
 配置WebHooks，进入Gitee的项目中，选择管理 -> WebHooks -> 填入URL URL的组成为 `http://用户名:userId@服务器IP:Jenkins端口/generic-webhook-trigger/invoke`
+
+![image-20221023012505990](https://oss.oh-undefined.com/image-20221023012505990.png)
 
 用户名的查看方式需要进入用户列表，点击所要查看的用户，然后生成用户ID即可。
 
@@ -134,3 +145,12 @@ echo '重启完成'
 添加完成后例子：`http://UserName:userId@ip:port/generic-webhook-trigger/invoke`然后点击测试可以看到Jenkins的看板是有部署项目的进度存在的。
 
 ![image-20221022024427094](https://oss.oh-undefined.com/image-20221022024427094.png)
+
+## 修改默认存储文件夹
+
+虽然Jenkins上面已经开始部署了，但是我们会发现，项目部署到了`/var/lib/jenkins/workspace/项目`中，但是我们的项目可能会存放在其他文件夹中。我们可以通过项目配置的General中选择高级->勾选使用自定义的工作空间
+
+![image-20221022191043881](https://oss.oh-undefined.com/image-20221022191043881.png)
+
+设置完毕之后，项目即可自动拉取到服务器中。
+
