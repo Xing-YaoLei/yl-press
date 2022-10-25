@@ -38,16 +38,5 @@ module.exports = {
     searchPlugin({}),
     shikiPlugin({}),
     prismjsPlugin({}),
-    {
-      "@vssue/vuepress-plugin-vssue": {
-        // 设置 `platform` 而不是 `api`
-        platform: "gitee-v5",
-        // 其他的 Vssue 配置
-        owner: "Xing_YaoLei",
-        repo: "ylPress",
-        clientId: "4910706a4c31aac7e43695c159fef5c32deff2c7b75726560da5847ec9fdd55a",
-        clientSecret: "240dd38158a5d7983c6586a5e6cc717158335f4d7843fbd597928e063446234c",
-      },
-    },
   ],
 };
