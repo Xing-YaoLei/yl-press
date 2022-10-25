@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV='/' vuepress dev docs",
     "build": "cross-env NODE_ENV='/press/' vuepress build docs",
-    "gitee":"cross-env NODE_ENV='/yl-press/' vuepress build docs"
+    "gitee": "cross-env NODE_ENV='/yl-press/' vuepress build docs"
   },
   "author": "烟雨任平生",
   "license": "ISC",
@@ -17,6 +17,9 @@
     "vuepress": "^2.0.0-beta.49"
   },
   "dependencies": {
+    "@vssue/api-gitee-v5": "^1.4.7",
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "@vuepress/theme-default": "^2.0.0-beta.49",
     "cross-env": "^7.0.3"
   }

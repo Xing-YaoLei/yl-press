@@ -17,7 +17,9 @@ module.exports = {
   // 网站语言
   description: "一个小小前端, 只希望能够开心",
   // 网站介绍
-  head: [["link", { rel: "icon", href: "http://oss.oh-undefined.com/xianluo.png" }]],
+  head: [
+    ["link", { rel: "icon", href: "http://oss.oh-undefined.com/xianluo.png" }],
+  ],
   // 顶部添加logo 会默认编译到网站的head区域
   theme: theme({
     // 具体主题配置项 旧版本存在配置放在themeConfig的现象
@@ -25,12 +27,27 @@ module.exports = {
     navbar,
     sidebar,
     lastUpdatedText: "最后更新",
-    sidebarDepth:2, // 侧边栏显示2级
+    sidebarDepth: 2, // 侧边栏显示2级
   }),
   // markdown设置
   markdown: {
     lineNumbers: true, // 代码块显示行号
   },
   // 插件配置
-  plugins: [searchPlugin({}), shikiPlugin({}), prismjsPlugin({})],
+  plugins: [
+    searchPlugin({}),
+    shikiPlugin({}),
+    prismjsPlugin({}),
+    {
+      "@vssue/vuepress-plugin-vssue": {
+        // 设置 `platform` 而不是 `api`
+        platform: "gitee-v5",
+        // 其他的 Vssue 配置
+        owner: "Xing_YaoLei",
+        repo: "ylPress",
+        clientId: "4910706a4c31aac7e43695c159fef5c32deff2c7b75726560da5847ec9fdd55a",
+        clientSecret: "240dd38158a5d7983c6586a5e6cc717158335f4d7843fbd597928e063446234c",
+      },
+    },
+  ],
 };
