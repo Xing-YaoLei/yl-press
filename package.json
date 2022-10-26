@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV='/' vuepress dev docs",
-    "build": "cross-env NODE_ENV='/press/' vuepress build docs",
+    "build": "cross-env NODE_ENV='/' vuepress build docs",
     "gitee": "cross-env NODE_ENV='/yl-press/' vuepress build docs"
   },
   "author": "烟雨任平生",

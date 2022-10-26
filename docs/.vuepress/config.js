@@ -34,9 +34,5 @@ module.exports = {
     lineNumbers: true, // 代码块显示行号
   },
   // 插件配置
-  plugins: [
-    searchPlugin({}),
-    shikiPlugin({}),
-    prismjsPlugin({}),
-  ],
+  plugins: [searchPlugin({}), shikiPlugin({}), prismjsPlugin({})],
 };
