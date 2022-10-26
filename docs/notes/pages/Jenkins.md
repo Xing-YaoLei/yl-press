@@ -160,3 +160,18 @@ echo '重启完成'
 
 设置完毕之后，项目即可自动拉取到服务器中。
 
+### 多项目部署
+
+尝试过部署的同学可能已经发现了，我们在部署一个项目的时候，能够正常触发，但是部署两个项目的时候，我们在设置WeHooks的时候，因为项目在同一个服务器，所以WeHooks是一样的，当一个项目提交`Commit`的时候，**所有项目都会重新部署**，这并不是我们想要的。
+
+那我们回到项目的配置管理中去，找到Generic Webhook Trigger下方的token选项，如下图所示。
+
+![image-20221026114051300](https://oss.oh-undefined.com/image-20221026114051300.png)
+
+在这个位置我们可以设置本项目的Token作为项目中的唯一标识，这个地方我部署的是个人的VuePress博客项目，所以我就简单使用VuePress来作为项目的Token了。
+
+设置完毕之后，我们应用并且保存，回到我们的Gitee或者是其他代码托管平台，进入项目 -> 管理 -> Wehooks，在我们原本的URL中，重新配置`http://JENKINS_URL@IPADDRESS:PORT/generic-webhook-trigger/invoke?token=vuepress`即可。`JENKINS_URL`以及`IPADDRESS:PORT`同上方配置教程一致。
+
+![image-20221026114525492](https://oss.oh-undefined.com/image-20221026114525492.png)
+
+这样我们的Jenkins在接收到项目的改变的时候，便不会触发两个项目或者多个项目的钩子进行全部部署了。
