@@ -7,7 +7,7 @@ module.exports = {
         "/notes/pages/GiteePage",
         "/notes/pages/VuePress",
         "/notes/pages/Koa",
-        "/notes/pages/Jenkins"
+        "/notes/pages/Jenkins",
       ],
     },
     {
@@ -15,8 +15,13 @@ module.exports = {
       collapsible: true,
       children: [
         "/notes/pages/Javascript/ES6.md",
-        "/notes/pages/Javascript/Js基础.md"
+        "/notes/pages/Javascript/Js基础.md",
       ],
+    },
+    {
+      text: "TypeScript",
+      collapsible: true,
+      children: ["/notes/pages/TypeScript"],
     },
     {
       text: "Vue.js",
@@ -37,7 +42,7 @@ module.exports = {
         "/notes/interview/Vue",
         "/notes/interview/React",
         "/notes/interview/计算机网络.md",
-        "/notes/interview/浏览器.md"
+        "/notes/interview/浏览器.md",
       ],
     },
   ],
