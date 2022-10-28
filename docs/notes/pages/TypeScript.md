@@ -1,4 +1,4 @@
-# TypeScript
+# TypeScript可能出现的Bug
 
 ### Ts警告不允许使用Any
 
