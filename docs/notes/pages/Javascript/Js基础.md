@@ -69,3 +69,21 @@ obj.say.apply(money); // 姓名艾达斯,年龄:?,技能:大鹏展翅,金额:7
   ```
 
   
+
+### 全局捕获Promise的错误
+
+```js
+// 该方法可以监听到事件的错误并触发对应的操作
+window.addEventListener('unhandledrejection',(event)=>{
+  event.preventDefault();
+  console.log(event.promise)
+  // event.promise 可以获取到失败的函数
+  console.log(event.reason)
+  // event.reason 可以获取到失败函数的错误信息
+})
+const p1 = new Promise((resolve, reject) =>{
+  reject(new Error('Unhandled rejection'))
+});
+console.log(p1)
+```
+
