@@ -41,3 +41,6 @@ state.value = { count: 2 }
 
 
 
+## Vue3官网挺帅的一个动画
+
+[后面自己也搞一个](https://cn.vuejs.org/guide/extras/animation.html#animating-with-watchers)
