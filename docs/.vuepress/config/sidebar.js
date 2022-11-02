@@ -26,7 +26,11 @@ module.exports = {
     {
       text: "Vue.js",
       collapsible: true,
-      children: ["/notes/pages/Vue/pinia", "/notes/pages/Vue/VueRouter"],
+      children: [
+        "/notes/pages/Vue/Vue3",
+        "/notes/pages/Vue/pinia",
+        "/notes/pages/Vue/VueRouter",
+      ],
     },
     {
       text: "力扣",
@@ -43,6 +47,7 @@ module.exports = {
         "/notes/interview/React",
         "/notes/interview/计算机网络.md",
         "/notes/interview/浏览器.md",
+        "/notes/interview/代码题.md",
       ],
     },
   ],
