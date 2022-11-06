@@ -22,7 +22,7 @@ yarn add commitizen cz-conventional-changelog @commitlint/config-conventional @c
 }
 ```
 
-## 根目录下创建`commitlint.config.js` 
+## 根目录下创建`commitlint.config.js`
 
 ```js
 module.exports = {

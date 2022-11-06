@@ -20,6 +20,12 @@ module.exports = {
       ],
     },
     {
+      text: "项目",
+      collapsible: true,
+      children: ["/notes/Project/CodeCommitLint"],
+    },
+
+    {
       text: "TypeScript",
       collapsible: true,
       children: ["/notes/pages/TypeScript"],
