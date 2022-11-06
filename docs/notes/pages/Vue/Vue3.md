@@ -39,7 +39,9 @@ state.value.count = 2
 state.value = { count: 2 }
 ```
 
+### Vue打包报错File '/xxx/xxx.vue.jsx' is a JavaScript file. Did you mean to enable the 'allowJs' option?
 
+在Vue组件中的script标签未使用TS来进行书写
 
 ## Vue3官网挺帅的一个动画
 

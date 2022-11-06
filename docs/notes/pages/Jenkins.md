@@ -175,3 +175,21 @@ echo '重启完成'
 ![image-20221026114525492](https://oss.oh-undefined.com/image-20221026114525492.png)
 
 这样我们的Jenkins在接收到项目的改变的时候，便不会触发两个项目或者多个项目的钩子进行全部部署了。
+
+
+
+### 通过SSH来完成服务器部署
+
+在阿里云服务器安装过Jenkins之后发现服务器好像带不动了，再通过SSH访问我的服务器的时候就会很卡顿，个人服务器配置为阿里云`ecs.t6` 2核CPU、2G内存以及40G硬盘，起初以为是家里面网络问题，打游戏都不卡就给它排除了，后来阿里云提醒性能受限，开启无性能约束后，嘎嘎费钱。
+
+![image-20221104115230302](https://oss.oh-undefined.com/image-20221104115230302.png)
+
+然后我又去买了个华为云的服务器，100块钱2核4G内存以及40G硬盘当作Jenkisn服务器，然后通过SSH工具`Publish Over SSH`来控制我的阿里云服务器进行项目部署（此处省略了在华为云服务器上安装Jenkins的步骤，照着上面来就行了），安装完之后，在插件市场安装`Publish Over SSH`
+
+![image-20221104115536760](https://oss.oh-undefined.com/image-20221104115536760.png)
+
+进入系统设置找到我们刚才安装的Publish over SSH插件的配置位置进行配置。
+
+![image-20221104123010429](https://oss.oh-undefined.com/image-20221104123010429.png)
+
+在箭头指向方位添加对应的名称、IP地址、用户名、远程的目录，添加完成后选择高级，选择Use password authentication, or use a different key选项输入服务器的密码，点击Test configuration测试成功与否。
