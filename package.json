@@ -6,7 +6,13 @@
   "scripts": {
     "dev": "cross-env NODE_ENV='/' vuepress dev docs",
     "build": "cross-env NODE_ENV='/' vuepress build docs",
-    "gitee": "cross-env NODE_ENV='/yl-press/' vuepress build docs"
+    "gitee": "cross-env NODE_ENV='/yl-press/' vuepress build docs",
+    "commit": "git add . && git-cz && git push"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   },
   "author": "烟雨任平生",
   "license": "ISC",
@@ -17,7 +23,13 @@
     "vuepress": "^2.0.0-beta.49"
   },
   "dependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
     "@vuepress/theme-default": "^2.0.0-beta.49",
-    "cross-env": "^7.0.3"
+    "commitizen": "^4.2.5",
+    "commitlint-config-cz": "^0.13.3",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0"
   }
 }
