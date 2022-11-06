@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-8605eac0","path":"/notes/pages/Vercel.html","title":"Vercel\u7F51\u7AD9\u90E8\u7F72","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[{"level":3,"title":"Vercel","slug":"vercel","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"notes/pages/Vercel.md"}');export{e as data};
