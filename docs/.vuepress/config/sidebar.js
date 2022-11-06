@@ -8,6 +8,7 @@ module.exports = {
         "/notes/pages/VuePress",
         "/notes/pages/Koa",
         "/notes/pages/Jenkins",
+        "/notes/pages/Vercel",
       ],
     },
     {

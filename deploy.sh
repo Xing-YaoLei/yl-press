@@ -11,6 +11,9 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f https://gitee.com/Xing_Lei/yl-press.git master
+# Github
+git push -f git@github.com:Xing-YaoLei/yl-press.git main
+# 码云 Gitee
+# git push -f https://gitee.com/Xing_Lei/yl-press.git master
 
 cd -
