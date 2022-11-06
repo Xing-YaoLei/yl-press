@@ -1,3 +1,17 @@
+### Start
+
+```sh
+npm install
+```
+
+### Auto Commit
+
+```sh
+sh ./deploy.sh
+```
+
+### Scripts
+
 "dev": "cross-env NODE_ENV='/' vuepress dev docs",
 "build": "cross-env NODE_ENV='/' vuepress build docs",
 "build:Pages":"cross-env NODE_ENV='/yl-press/' vuepress build docs"
