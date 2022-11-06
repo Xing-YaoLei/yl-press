@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-6b4ee1e4","path":"/notes/pages/Koa.html","title":"Koa\u7684\u670D\u52A1\u7AEF\u5F00\u53D1","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1663755205000,"contributors":[{"name":"Xing_YaoLei","email":"542528512@qq.com","commits":1}]},"filePathRelative":"notes/pages/Koa.md"}');export{e as data};

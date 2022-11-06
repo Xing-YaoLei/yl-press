@@ -10,6 +10,7 @@ const navbar = require("./config/navbar");
 const sidebar = require("./config/sidebar");
 // 侧边栏配置
 module.exports = {
+  dest: "./dist",
   base: process.env.NODE_ENV,
   title: "YaoLei",
   // 网站首页
