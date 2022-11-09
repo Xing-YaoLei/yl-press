@@ -22,7 +22,7 @@ module.exports = {
     {
       text: "项目",
       collapsible: true,
-      children: ["/notes/Project/CodeCommitLint"],
+      children: ["/notes/Project/CodeCommitLint", "/notes/Project/Vite"],
     },
 
     {
