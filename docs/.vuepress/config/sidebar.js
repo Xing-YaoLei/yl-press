@@ -37,6 +37,7 @@ module.exports = {
         "/notes/pages/Vue/Vue3",
         "/notes/pages/Vue/pinia",
         "/notes/pages/Vue/VueRouter",
+        "/notes/pages/Vue/Auth",
       ],
     },
     {
