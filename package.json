@@ -7,7 +7,7 @@
     "dev": "cross-env NODE_ENV='/' vuepress dev docs",
     "build": "cross-env NODE_ENV='/' vuepress build docs",
     "gitee": "cross-env NODE_ENV='/yl-press/' vuepress build docs",
-    "commit": "git add . && git-cz && git push"
+    "commit": "pnpm run build && git add . && git-cz && git push"
   },
   "config": {
     "commitizen": {
