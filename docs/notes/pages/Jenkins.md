@@ -191,3 +191,23 @@ echo '重启完成'
 ![image-20221104123010429](https://oss.oh-undefined.com/image-20221104123010429.png)
 
 在箭头指向方位添加对应的名称、IP 地址、用户名、远程的目录，添加完成后选择高级，选择 Use password authentication, or use a different key 选项输入服务器的密码，点击 Test configuration 测试成功与否。
+
+> 整个思路大致是这样的：一个服务器专门用来存放个人的一些网站以及博客的项目，然后另一个服务器安装Jenkins通过仓库的webhooks来触发钩子，然后通过SSH来接入项目的仓库地址，执行一系列部署的操作。
+
+依旧是按照上方创建一个流水线项目（因为gitee的仓库部分功能不完善，所以我将仓库换到了github上面）
+
+![image-20221123104119979](https://oss.oh-undefined.com/image-20221123104119979.png)
+
+初始化的时候我们可以选择勾选github仓库，然后将项目的仓库URL放入输入框内（**注意 是仓库的URL，不是仓库的Git的URL**）放入后我们就不需要像以前一样，勾选下方的源代码管理了
+
+![image-20221123104246038](https://oss.oh-undefined.com/image-20221123104246038.png)
+
+依旧是勾选Generic Webhook Trigger来触发仓库变动的钩子🪝。然后继续向下滑，到Build Steps的选项中去。
+
+![image-20221123104407867](https://oss.oh-undefined.com/image-20221123104407867.png)
+
+因为之前已经配置过SSH服务器了，所以我们只需要在这个地方填上对应的名字，然后在下方的Exec Command 输入我们连接到服务器后的操作即可，最后点击应用以及保存即可返回到项目页面。然后我们尝试点击立即构建试试看。
+
+![image-20221123104549963](https://oss.oh-undefined.com/image-20221123104549963.png)
+
+成功了，然后我们通过点击此项目可以进入此次构建的详情以及查看构建时控制台输出的内容，基本上可以通过控制台输出来判断是否项目运行成功了，也可以通过直接访问自己的网站查看是否更新也可以🎉。
