@@ -26,6 +26,7 @@ module.exports = {
         "/notes/Project/CodeCommitLint",
         "/notes/Project/Vite",
         "/notes/Project/HTML",
+        "/notes/Project/Vue",
       ],
     },
 
