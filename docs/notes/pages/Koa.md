@@ -91,7 +91,31 @@ router.all("/", async (ctx) => {
 export default router;
 ```
 
+#### 实际调用案例
 
+```ts
+// src -> api -> proxy.ts
+import { request } from "@/utils/service"
+export const proxyGetAPI = (params: any = {}) => {
+  return request({
+    url: "http://www.oh-undefined.com/api/v1/proxy",
+    method: "get",
+    params
+  })
+}
+
+// views -> xxx.vue
+import { onMounted } from 'vue'
+import { proxyGetAPI } from "@/api/proxy"
+onMounted(() => {
+  proxyGetAPI({
+    url: "http:///test.cn/api/getlist"
+  }).then((res) => {
+    // 此处会拿到对应接口的数据
+    console.log(res)
+  })
+})
+```
 
 ::: warning
 Koa-body 在配置完成上传图片的功能后，可能会引发所有的请求出现 415 的情况。
