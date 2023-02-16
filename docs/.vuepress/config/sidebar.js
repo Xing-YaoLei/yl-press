@@ -27,6 +27,8 @@ module.exports = {
         "/notes/Project/Vite",
         "/notes/Project/HTML",
         "/notes/Project/Vue",
+        "/notes/Project/Pinia",
+        "/notes/Project/qiankun",
       ],
     },
 
