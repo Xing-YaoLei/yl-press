@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-a6c9fa22","path":"/computer/nvm.html","title":"\u524D\u7AEF Nodejs \u7248\u672C\u7BA1\u7406 NVM \u5B89\u88C5","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"computer/nvm.md"}');export{t as data};

@@ -98,3 +98,4 @@ nvm list
 
 如果上述nvm提供的nodejs版本无法适配你的要求的情况下，可以通过`nvm install version` version为你需要安装的版本号，例如:`nvm install v12.22.12`即可。在安装完成后，通过使用`nvm use version`来进行node版本的切换。例如`nvm use v12.22.12`即可。
 
+[Github官方文档](https://github.com/nvm-sh/nvm#troubleshooting-on-macos)查看具体的配置以及更多的问题方案。
