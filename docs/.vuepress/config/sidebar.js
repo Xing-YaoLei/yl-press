@@ -68,4 +68,11 @@ module.exports = {
       ],
     },
   ],
+  "/computer": [
+    {
+      text: "电脑软件",
+      collapsible: true,
+      children: ["/computer/nvm.md"],
+    },
+  ],
 };

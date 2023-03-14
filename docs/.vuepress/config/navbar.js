@@ -1,14 +1,16 @@
 module.exports = [
   { text: "学习", link: "/notes/pages/VuePress.md" },
   {
+    text: "系统",
+    link: "/computer/nvm.md",
+  },
+  {
     text: "文档",
     children: [
       {
         text: "前端项目打开流程",
         link: "/document/study/frontProejctStart.md",
       },
-      // { text: "介绍", link: "/document/introduction/" },
-      // { text: "注意事项", link: "/document/tips/" },
     ],
   },
   {
