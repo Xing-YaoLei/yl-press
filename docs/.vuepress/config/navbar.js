@@ -1,5 +1,17 @@
 module.exports = [
-  { text: "学习", link: "/notes/pages/VuePress.md" },
+  {
+    text: "学习",
+    children: [
+      {
+        text: "前端",
+        link: "/notes/pages/VuePress.md",
+      },
+      {
+        text: "后端",
+        link: "/backEndDev/pages/1-Go.md",
+      },
+    ],
+  },
   {
     text: "系统",
     link: "/computer/nvm.md",

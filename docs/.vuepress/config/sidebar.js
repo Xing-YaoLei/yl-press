@@ -75,4 +75,11 @@ module.exports = {
       children: ["/computer/nvm.md"],
     },
   ],
+  "/backEndDev": [
+    {
+      text: "Go",
+      collapsible: true,
+      children: ["/backEndDev/pages/1-Go.md"],
+    },
+  ],
 };
