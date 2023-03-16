@@ -79,7 +79,10 @@ module.exports = {
     {
       text: "Go",
       collapsible: true,
-      children: ["/backEndDev/pages/1-Go.md"],
+      children: [
+        "/backEndDev/pages/Golang/1-Go.md",
+        "/backEndDev/pages/Golang/variable.md",
+      ],
     },
   ],
 };
