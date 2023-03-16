@@ -40,7 +40,7 @@ func main() {
 
 ![image-20230316142357534](https://oss.oh-undefined.com/image-20230316142357534.png)
 
-双击运行后得到如下效果。
+在MacOS操作系统下双击运行后得到如下效果（Windows电脑需要在命令行中输入对应文件名运行，例如打包生成出来的文件为`Hello.exe`，那么则在当前目录下运行命令行 ./Hello.exe）即可。
 
 ![image-20230316142422989](https://oss.oh-undefined.com/image-20230316142422989.png)
 

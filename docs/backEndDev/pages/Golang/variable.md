@@ -231,7 +231,54 @@ func main(){
 
 其中`Println`会进行换行输出。 
 
+```go
+package main
+import "fmt"
+var (
+	a = 1
+	b = "abc"
+	c = "666"
+	d = 12.55
+)
+func main(){
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
+}
+```
+
+```sh
+# ▶ go run index.go
+# 1
+# abc
+# 666
+# 12.55
+```
+
 其中`Print`则会原样输出。
+
+```go
+package main
+import "fmt"
+var (
+	a = 1
+	b = "abc"
+	c = "666"
+	d = 12.55
+)
+func main(){
+	fmt.Print(a)
+	fmt.Print(b)
+	fmt.Print(c)
+	fmt.Print(d)
+}
+```
+
+```sh
+# ▶ go run index.go
+# 1abc66612.55% 
+```
 
 其中`Printf`会进行格式化输出。
 
