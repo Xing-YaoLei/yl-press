@@ -83,6 +83,7 @@ module.exports = {
         "/backEndDev/pages/Golang/1-Go.md",
         "/backEndDev/pages/Golang/variable.md",
         "/backEndDev/pages/Golang/DataType.md",
+        "/backEndDev/pages/Golang/math.md",
       ],
     },
   ],
