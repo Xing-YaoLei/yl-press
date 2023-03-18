@@ -102,5 +102,66 @@ func main(){
 }
 ```
 
+## 赋值运算符
 
+`=, +=, -=, *=, /=, %=`为Go中的赋值运算符，都是将等号后的内容赋值给等号前的变量中去，与JavaScript相同。 
 
+## 关系运算符
+
+`==, !=, >, <, >=, <=`为Go中的关系运算符，这些运算符也与JavaScript相同，`==`为判断是否相等，`=`则代表赋值。关系运算符所返回的值，为布尔类型的`true`与`false`。
+
+## 逻辑运算符
+
+`&&, ||, !`为Go中的逻辑运算符，这些运算符也与JavaScript相同，
+
+- `&&`为逻辑且，代表同时需要满足运算符前后的两个条件则为正确。
+- `||`为逻辑或，代表运算符前后满足其中一个条件则为正确。
+- `!`为逻辑非，代表最终结果为运算符不同的条件则为正确。
+
+```go
+package main
+import "fmt"
+func main(){
+	age := 12
+    user := true
+	fmt.Println(age)
+	fmt.Println(age < 20 && age > 10)
+	fmt.Println(age > 20 || age < 10)
+    fmt.Println(!user)
+}
+```
+
+```sh
+# go run .\index.go
+# 12
+# true 逻辑且
+# false 逻辑或
+# false 逻辑非
+```
+
+## 其他运算符
+
+`&`运算符能够获取到当前变量在内存中所存储的地址
+
+```go
+package main
+import "fmt"
+func main(){
+	var a  = 1
+	fmt.Println(&a, a)  //0xc00000e0a8 1
+}
+```
+
+`*`运算符能够获取内存地址中所储存的值
+
+```go
+package main
+import "fmt"
+func main(){
+    var a = 10086
+    var b = &a
+    fmt.Println(&a)   // 0xc00000e0a8
+    fmt.Printf("内存地址为%v,内存地址所对应的值为%v",&a,*b) 
+    // 内存地址为0xc00000e0a8,内存地址所对应的值为10086
+}
+```

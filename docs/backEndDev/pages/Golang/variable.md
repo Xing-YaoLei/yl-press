@@ -186,6 +186,12 @@ func main(){
 
 除了一个一个定义以外，还可以通过以下方式快速定义多个全局变量
 
+::: warning 警告
+
+在定义全局变量的时候，无法使用`变量名 := 10`的这种定义方法来定义。
+
+:::
+
 ```go
 package main
 import "fmt"
@@ -203,6 +209,26 @@ func main(){
 ```sh
 # ▶ go run index.go
 # 1 abc 666 12.55
+```
+
+## 定义常量
+
+在Go中定义常量的方式与JavaScript相同，通过使用`const`进行定义，定义后的数据无法重新赋值以及修改。
+
+```
+package main
+import "fmt"
+func main(){
+	const a  = 1
+	a += 2
+	fmt.Println(a)
+}
+```
+
+```sh
+# go run .\index.go
+# command-line-arguments
+# cannot assign to a (untyped int constant 1)
 ```
 
 ## fmt
