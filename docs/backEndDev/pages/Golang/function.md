@@ -160,6 +160,30 @@ func sum(num1 ,num2 int) (res ,result int) {
 }
 ```
 
+### 不确定数量的函数返回值
+
+在有些情况下，我们可能遇到不确定参数的时候，类似于JavaScript中的arguments，这个时候，在Go中我们可以通过使用`变量名...`来获取这些参数。（跟Js这不一模一样。）如下所示。
+
+```go
+package main
+import "fmt"
+func sum(nums... int) {
+	fmt.Println(nums)
+   // go run .\index.go
+   // []
+   // [1]
+   // [1 2]
+   // [1 2 3]
+}
+
+func main() {
+	sum()
+	sum(1)
+	sum(1,2)
+	sum(1,2,3)
+}
+```
+
 ### 实现一个方法，交换两个变量的数据。 a =  1, b = 2, 最终输出 a = 2, b = 1
 
 ```go
@@ -177,5 +201,76 @@ func main(){
 	num1,num2 = changeValue(num1,num2)
 	fmt.Println("num1 = ",num1, "num2 = ",num2)
 }
+```
+
+### 在函数调用中，通过指针进行参数值的修改
+
+正常情况下不同方法中，创建的变量，所占用的地址空间是不同的，所以在函数调用的时候，虽然能够接收调用函数所传递的参数。但是无法在被调用函数中进行数值的修改。如下所示。
+
+```go
+package main
+import "fmt"
+func sum(nums int) {
+	nums = 666
+	fmt.Println(nums)
+    // 666
+}
+
+func main() {
+	num := 888
+	sum(num)
+	fmt.Println("num = ",num)
+    // num =  888
+}
+// 根据输出结果可以发现，虽然在调用sum函数的时候，针对nums进行了数据的修改，但是并没有影响到main函数中num对应的值。
+```
+
+我们可以通过使用指针，将变量存放的地址，传递给被调用函数，然后在被调用函数中，通过指针来修改对应地址中，变量的值。如下所示
+
+```go
+package main
+import "fmt"
+func sum(nums *int) {
+	*nums = 666
+	fmt.Println(nums) // 0xc00000e0a8
+}
+
+func main() {
+	num := 888
+	sum(&num)
+	fmt.Println("num = ",num)
+    // num =  666
+}
+```
+
+通过上述例子，我们可以看到在调用`sum`方法的时候，我们通过`&`符号，将`num`变量所对应的地址传递给了`sum`方法，在`sum`方法中，我们接收参数的使用，使用的是`func sum(nums *int) `进行接收，赋值的时候则是给`*nums = 666`进行修改。最终输出结果，成功修改了变量的值为666。`&与*`的[使用方法](./math.md#其他运算符)
+
+### 通过使用指针交换两个变量的数据。  a =  1, b = 2, 最终输出 a = 2, b = 1
+
+```go
+package main
+import "fmt"
+func exchangeHandle(num1 *int, num2 *int) {
+    // 定义中间数，用来接收num1内存中所对应的值
+	t := *num1
+    // 将num1内存中所对应的值，更改为num2内存中所对应的值
+	*num1 = *num2
+    // 将num2内存中所对应的值，更改为t变量中的值 完成交换
+	*num2 = t
+}
+
+func main() {
+	num1 := 1
+	num2 := 222
+	exchangeHandle(&num1, &num2)
+	fmt.Println("num1 = ",num1)
+	fmt.Println("num2 = ",num2)
+}
+```
+
+```sh
+# go run .\index.go
+# num1 =  222
+# num2 =  1
 ```
 
