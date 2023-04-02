@@ -88,6 +88,7 @@ module.exports = {
         "/backEndDev/pages/Golang/package.md",
         "/backEndDev/pages/Golang/import.md",
         "/backEndDev/pages/Golang/defer.md",
+        "/backEndDev/pages/Golang/slice.md",
       ],
     },
   ],
