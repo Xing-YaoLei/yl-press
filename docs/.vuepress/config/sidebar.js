@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 module.exports = {
   "/notes": [
     {
@@ -31,7 +33,6 @@ module.exports = {
         "/notes/Project/qiankun",
       ],
     },
-
     {
       text: "TypeScript",
       collapsible: true,
@@ -76,20 +77,15 @@ module.exports = {
     },
   ],
   "/backEndDev": [
+    // 根据路径下的文件生成侧边栏
     {
       text: "Go",
       collapsible: true,
-      children: [
-        "/backEndDev/pages/Golang/1-Go.md",
-        "/backEndDev/pages/Golang/variable.md",
-        "/backEndDev/pages/Golang/DataType.md",
-        "/backEndDev/pages/Golang/math.md",
-        "/backEndDev/pages/Golang/function.md",
-        "/backEndDev/pages/Golang/package.md",
-        "/backEndDev/pages/Golang/import.md",
-        "/backEndDev/pages/Golang/defer.md",
-        "/backEndDev/pages/Golang/slice.md",
-      ],
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../backEndDev/pages/Golang"))
+        .map((item) => {
+          return "/backEndDev/pages/Golang/" + item;
+        }),
     },
   ],
 };
