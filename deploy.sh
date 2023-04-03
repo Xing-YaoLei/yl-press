@@ -3,6 +3,8 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+yarn run commit
+
 # 生成静态文件
 yarn run build
 
@@ -10,7 +12,7 @@ yarn run build
 git init
 # git add -A
 # git commit -m 'deploy'
-yarn run commit
+
 
 # Github
 git push -f git@github.com:Xing-YaoLei/yl-press.git main
