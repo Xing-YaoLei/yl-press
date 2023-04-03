@@ -10,7 +10,7 @@ yarn run build
 
 # 将网站提交Gitee
 git init
-git add -A
+git add .
 git commit -m 'deploy'
 
 # Github
