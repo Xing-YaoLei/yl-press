@@ -1,5 +1,7 @@
 # 使用VSCode开发Go
 
+![img](https://oss.oh-undefined.com/397e9615bk3d5a799f9742181d3ca666.jpeg)
+
 在使用VSCode开发Go的时候，我们通过打开一个装有Go代码的文件夹，编辑器则会自动识别其中的代码，初次使用会弹出提示，如下所示。
 
 ![image-20230403154557146](https://oss.oh-undefined.com/image-20230403154557146.png)

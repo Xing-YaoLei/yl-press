@@ -8,7 +8,7 @@ module.exports = [
       },
       {
         text: "后端",
-        link: "/backEndDev/pages/Golang/1-Go.md",
+        link: "/backEndDev/pages/Golang/00-GoProxy.md",
       },
     ],
   },
