@@ -57,10 +57,6 @@ module.exports = [
             text: "掘金",
             link: "https://juejin.im/",
           },
-          {
-            text: "CSDN",
-            link: "https://blog.csdn.net/",
-          },
         ],
       },
     ],
