@@ -87,5 +87,14 @@ module.exports = {
           return "/backEndDev/pages/Golang/" + item;
         }),
     },
+    {
+      text: "Gin",
+      collapsible: true,
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../backEndDev/pages/Gin"))
+        .map((item) => {
+          return "/backEndDev/pages/Gin/" + item;
+        }),
+    },
   ],
 };
