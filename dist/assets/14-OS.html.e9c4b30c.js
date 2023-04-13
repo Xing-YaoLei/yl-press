@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-79b580a4","path":"/backEndDev/pages/Golang/14-OS.html","title":"","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1681369986000,"contributors":[{"name":"Xing_YaoLei","email":"542528512@qq.com","commits":1}]},"filePathRelative":"backEndDev/pages/Golang/14-OS.md"}');export{e as data};
