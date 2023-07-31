@@ -53,20 +53,29 @@ module.exports = {
     {
       text: "力扣",
       collapsible: true,
-      children: ["/notes/Leetcode/1-两数之和", "/notes/Leetcode/2-整数反转"],
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../notes/Leetcode"))
+        .map((item) => {
+          return "/notes/Leetcode/" + item;
+        }),
     },
     {
       text: "面试题",
       collapsible: true,
-      children: [
-        "/notes/interview/HTML",
-        "/notes/interview/Js",
-        "/notes/interview/Vue",
-        "/notes/interview/React",
-        "/notes/interview/计算机网络.md",
-        "/notes/interview/浏览器.md",
-        "/notes/interview/代码题.md",
-      ],
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../notes/interview"))
+        .map((item) => {
+          return "/notes/interview/" + item;
+        }),
+    },
+    {
+      text: "前端自动化",
+      collapsible: true,
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../notes/automation"))
+        .map((item) => {
+          return "/notes/automation/" + item;
+        }),
     },
   ],
   "/computer": [
