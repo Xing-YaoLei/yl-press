@@ -4,9 +4,13 @@
 
 作为前端开发，偶尔在接手老项目的时候，可能会需要安装老版本的 Node，但是在开发新项目或者使用新技术的时候可能就需要使用更新的 Nodejs 版本。Nvm 就是能够实现这样操作的工具之一。
 
+## 电脑环境
+
 🖥：MacBook Pro For M1 Pro 版本
 
 ⭐️：MacOS Ventura 13.2.1 版本
+
+## 安装
 
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -66,6 +70,8 @@ source ~/.zshrc
 
 ::::
 
+## 查看版本
+
 在运行完毕之后上述命令后，我们可以通过使用`nvm -v`来查看nvm是否安装成功了，如果安装成功，则会显示对应的nvm版本号。
 
 ```sh
@@ -97,5 +103,39 @@ nvm list
 ```
 
 如果上述nvm提供的nodejs版本无法适配你的要求的情况下，可以通过`nvm install version` version为你需要安装的版本号，例如:`nvm install v12.22.12`即可。在安装完成后，通过使用`nvm use version`来进行node版本的切换。例如`nvm use v12.22.12`即可。
+
+## 切换常驻版本
+
+通过以上的方式已经能够正常的将node版本随意切换了，但是还是存在一个问题，那就是切换版本的效果**只在当前打开的命令行窗口会话有效**，无法做到全局切换的效果。如果想要切换的情况下，则需要通过以下命令来进行。
+
+```sh
+nvm alias default <version>
+```
+
+其中 `<version>` 是您想要设置为默认的 Node.js 版本。例如，如果您想将 Node.js 14 设置为默认版本，可以运行：
+
+```sh
+nvm alias default 14
+```
+
+**永久保存默认版本**：
+
+要确保默认版本在新的终端窗口中仍然有效，您可以将上述命令添加到您的 shell 配置文件中，例如 `~/.bashrc`、`~/.zshrc` 或 `~/.profile`，具体取决于您使用的 shell。
+
+打开适当的配置文件，并添加以下行（请根据您选择的 shell 来选择适当的文件）：
+
+- 对于 Bash，编辑 `~/.bashrc` 文件：
+
+  ```
+  shellCopy code
+  echo 'nvm alias default <version>' >> ~/.bashrc
+  ```
+
+- 对于 Zsh，编辑 `~/.zshrc` 文件：
+
+  ```
+  shellCopy code
+  echo 'nvm alias default <version>' >> ~/.zshrc
+  ```
 
 [Github官方文档](https://github.com/nvm-sh/nvm#troubleshooting-on-macos)查看具体的配置以及更多的问题方案。
