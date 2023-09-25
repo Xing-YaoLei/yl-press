@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-e5f9195c","path":"/backEndDev/pages/Golang/13-interface.html","title":"interface","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1681222939000,"contributors":[{"name":"Xing_YaoLei","email":"542528512@qq.com","commits":1}]},"filePathRelative":"backEndDev/pages/Golang/13-interface.md"}');export{e as data};
