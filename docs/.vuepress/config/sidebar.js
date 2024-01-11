@@ -51,6 +51,15 @@ module.exports = {
       ],
     },
     {
+      text: "React.js",
+      collapsible: true,
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../notes/pages/React"))
+        .map((item) => {
+          return "/notes/pages/React/" + item;
+        }),
+    },
+    {
       text: "力扣",
       collapsible: true,
       children: fs
