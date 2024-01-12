@@ -59,4 +59,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 ## Root layout 根布局
 
-在`/app/layout.tsx`中创建的布局，为根布局，并且是系统必须的。添加到根布局中的任何 UI 样式，都会在整个项目中的所有页面之间共享。您可以使用根布局来修改`html`、`body`标签。1
+在`/app/layout.tsx`中创建的布局，为根布局，并且是系统必须的。添加到根布局中的任何 UI 样式，都会在整个项目中的所有页面之间共享。您可以使用根布局来修改`html`、`body`标签。
