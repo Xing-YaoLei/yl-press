@@ -24,14 +24,11 @@ module.exports = {
     {
       text: "项目",
       collapsible: true,
-      children: [
-        "/notes/Project/CodeCommitLint",
-        "/notes/Project/Vite",
-        "/notes/Project/HTML",
-        "/notes/Project/Vue",
-        "/notes/Project/Pinia",
-        "/notes/Project/qiankun",
-      ],
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../notes/project"))
+        .map((item) => {
+          return "/notes/project/" + item;
+        }),
     },
     {
       text: "TypeScript",
@@ -41,14 +38,11 @@ module.exports = {
     {
       text: "Vue.js",
       collapsible: true,
-      children: [
-        "/notes/pages/Vue/Vue3",
-        "/notes/pages/Vue/pinia",
-        "/notes/pages/Vue/VueRouter",
-        "/notes/pages/Vue/Auth",
-        "/notes/pages/Vue/searchBar",
-        "/notes/pages/Vue/Hook",
-      ],
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../notes/pages/Vue"))
+        .map((item) => {
+          return "/notes/pages/Vue/" + item;
+        }),
     },
     {
       text: "React.js",
