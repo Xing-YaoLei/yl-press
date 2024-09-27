@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as r,b as e,e as c}from"./app.680d6c76.js";const n={},o=e("h1",{id:"interface",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#interface","aria-hidden":"true"},"#"),c(" interface")],-1),s=[o];function _(i,d){return t(),r("div",null,s)}var h=a(n,[["render",_],["__file","13-interface.html.vue"]]);export{h as default};
