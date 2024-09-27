@@ -1,7 +1,5 @@
 # 前端 Nodejs 版本管理 NVM 安装
 
-![image-20230314171649554](https://oss.oh-undefined.com/image-20230314171649554.png)
-
 作为前端开发，偶尔在接手老项目的时候，可能会需要安装老版本的 Node，但是在开发新项目或者使用新技术的时候可能就需要使用更新的 Nodejs 版本。Nvm 就是能够实现这样操作的工具之一。
 
 ## 电脑环境
@@ -32,7 +30,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 ::: tip bash
 
-如果你使用的是bash，可能你需要修改`.bash_profile`或者`~/.profile`，如果没有`~/.bashrc`文件，你可以通过`source ~/<your_profile_file>`来创建它解决这个问题。
+如果你使用的是 bash，可能你需要修改`.bash_profile`或者`~/.profile`，如果没有`~/.bashrc`文件，你可以通过`source ~/<your_profile_file>`来创建它解决这个问题。
 
 :::
 
@@ -51,6 +49,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ```sh
 source ~/.bashrc
 ```
+
 :::
 
 ::: code-group-item zsh
@@ -58,6 +57,7 @@ source ~/.bashrc
 ```sh
 source ~/.zshrc
 ```
+
 :::
 
 ::: code-group-item ksh
@@ -72,14 +72,14 @@ source ~/.zshrc
 
 ## 查看版本
 
-在运行完毕之后上述命令后，我们可以通过使用`nvm -v`来查看nvm是否安装成功了，如果安装成功，则会显示对应的nvm版本号。
+在运行完毕之后上述命令后，我们可以通过使用`nvm -v`来查看 nvm 是否安装成功了，如果安装成功，则会显示对应的 nvm 版本号。
 
 ```sh
 nvm -v
 # 0.39.3
 ```
 
-如果能够正常的输出版本好，那么就代表nvm已经成功的安装到你的电脑上了，紧接着我们通过使用`nvm list`来查看默认提供的LTS(**Long Time Support / 长期支持版本**)版本的node，通常node版本偶数版本都为LTS版本。
+如果能够正常的输出版本好，那么就代表 nvm 已经成功的安装到你的电脑上了，紧接着我们通过使用`nvm list`来查看默认提供的 LTS(**Long Time Support / 长期支持版本**)版本的 node，通常 node 版本偶数版本都为 LTS 版本。
 
 ```sh
 nvm list
@@ -102,11 +102,11 @@ nvm list
 # lts/hydrogen -> v18.15.0 (-> N/A)
 ```
 
-如果上述nvm提供的nodejs版本无法适配你的要求的情况下，可以通过`nvm install version` version为你需要安装的版本号，例如:`nvm install v12.22.12`即可。在安装完成后，通过使用`nvm use version`来进行node版本的切换。例如`nvm use v12.22.12`即可。
+如果上述 nvm 提供的 nodejs 版本无法适配你的要求的情况下，可以通过`nvm install version` version 为你需要安装的版本号，例如:`nvm install v12.22.12`即可。在安装完成后，通过使用`nvm use version`来进行 node 版本的切换。例如`nvm use v12.22.12`即可。
 
 ## 切换常驻版本
 
-通过以上的方式已经能够正常的将node版本随意切换了，但是还是存在一个问题，那就是切换版本的效果**只在当前打开的命令行窗口会话有效**，无法做到全局切换的效果。如果想要切换的情况下，则需要通过以下命令来进行。
+通过以上的方式已经能够正常的将 node 版本随意切换了，但是还是存在一个问题，那就是切换版本的效果**只在当前打开的命令行窗口会话有效**，无法做到全局切换的效果。如果想要切换的情况下，则需要通过以下命令来进行。
 
 ```sh
 nvm alias default <version>
@@ -138,4 +138,4 @@ nvm alias default 14
   echo 'nvm alias default <version>' >> ~/.zshrc
   ```
 
-[Github官方文档](https://github.com/nvm-sh/nvm#troubleshooting-on-macos)查看具体的配置以及更多的问题方案。
+[Github 官方文档](https://github.com/nvm-sh/nvm#troubleshooting-on-macos)查看具体的配置以及更多的问题方案。
