@@ -83,7 +83,7 @@ module.exports = {
   ],
   "/computer": [
     {
-      text: "电脑软件",
+      text: "系统配置",
       collapsible: true,
       children: fs
         .readdirSync(path.resolve(__dirname, "../../computer"))
