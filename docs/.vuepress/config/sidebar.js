@@ -85,7 +85,11 @@ module.exports = {
     {
       text: "电脑软件",
       collapsible: true,
-      children: ["/computer/nvm.md"],
+      children: fs
+        .readdirSync(path.resolve(__dirname, "../../computer"))
+        .map((item) => {
+          return "/computer/" + item;
+        }),
     },
   ],
   "/backEndDev": [
