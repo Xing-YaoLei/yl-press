@@ -38,6 +38,19 @@ module.exports = [
         ],
       },
       {
+        text: "友情链接",
+        children: [
+          {
+            text: "雲龙-博客",
+            link: "http://karlkidd.fun/",
+          },
+          {
+            text: "搬砖老段-博客",
+            link: "https://dxh98.cn/",
+          },
+        ],
+      },
+      {
         text: "在线服务",
         children: [
           {
